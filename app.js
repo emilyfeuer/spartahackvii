@@ -31,7 +31,7 @@ var bed_time;
 
 
 function assignPreferences(){
-  
+
 }
 
 // name, open_time, close_time, cost_scale, radius, local
@@ -78,6 +78,9 @@ for (let key = 0; key < length(data_dict); key++){
     }
     if ((activity_list)[i].cost_scale <= budget_range){
       add_count += 1;
+    }
+    if (activity_list.key in food_preferences){
+      
     }
   }
 }
