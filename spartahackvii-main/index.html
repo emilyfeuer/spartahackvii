@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> <!--title of the tap -->
+    <link rel="stylesheet" href="./style.css">  <!-- include the style.css file for the presentation-->
+</head>
+<body>
+    <h1>Entertainweeeee</h1>    <!--header of the page-->
+    <p>Welcome to Entertainwe! What is your name?</p>   <!--p stands for paragraph-->
+    <form action = "index.html" method="GET">   <!--variables stored and will be use in app.js???-->
+        <input type="text" name="name" placeholder="Name">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <form action = "index.html" method="GET" id="preferences">  <!--variables stored and will be use in app.js???-->    
+    <h1>Itinerary Preferences:</h1>
+
+    <label for="location">Where are you traveling to?</label>
+    <select id = "location">  
+        <option> East Lansing </option>   
+    </select>
+    <br>
+
+    <label for="begin_date">On what date are you arriving to your destination?</label>
+    <input type="date" id="begin_date" name="begin_date" placeholder="Arrival Date">
+    <br>
+
+    <label for="end_date">On what date are you leaving?</label>
+    <input type="date" id="end_date" name="end_date" placeholder="Departure Date">
+    <br>
+
+    </form>
+</body>
+</html>
