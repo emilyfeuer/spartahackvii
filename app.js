@@ -23,7 +23,7 @@ let iHop = new Attraction("iHop", 7, 15, 2, 1, false)
 
 var data_dict = {
 "cusine": {"Japanese": [Udon_Sushi_Restaurant, Omi_Sushi], "Chinese": [East_Cafe, Royal_Pot], "American": [Buffalo_Wild_Wings, iHop]}, 
-"site_seeing": {}
+"sightseeing": {}
 }
 
 
