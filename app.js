@@ -1,12 +1,13 @@
 
 class Attraction {
-  constructor(name, open_time, close_time, cost_scale, radius, local ) {
+  constructor(name, open_time = 0, close_time = 0, cost_scale = 1, radius = 0, local = false) {
     this.name = name;
-    this.open_time = 0
-    this.close_time = 0
-    this.cost_scale = 1
-    this.radius = 0
-    this.local = true
+    this.open_time = open_time
+    this.close_time = close_time
+    this.cost_scale = cost_scale
+    this.radius = radius
+    this.local = local
+    this.activity_level = 0
   }
 }
 
@@ -30,8 +31,8 @@ var bed_time;
 
 
 function assignPreferences(){
-  city_travelled = some shit idk;
-
+  
+}
 
 // name, open_time, close_time, cost_scale, radius, local
 // let Udon_Sushi_Restaurant = new Attraction("Udon_Sushi_Restaurant", 12, 20, 3, 3, true)
@@ -63,12 +64,21 @@ var data_dict = {
 }
 
 
-var itinerary_list = []
+var itinerary_list = [];
 
 for (let key = 0; key < length(data_dict); key++){
-  var value = data_dict[key];
-  for (let activity = 0; activity < length(value); activity++){
-    
+  var add_count;
+  var activity_list = data_dict[key];
+  for (let i = 0; i < length(value); i++){
+    if ((activity_list)[i].activity_level <= activity_level){
+      add_count += 1;
+    }
+    if ((activity_list)[i].radius <= preferred_radius){
+      add_count += 1;
+    }
+    if ((activity_list)[i].cost_scale <= budget_range){
+      add_count += 1;
+    }
   }
 }
 
