@@ -1,51 +1,86 @@
-
 class Attraction {
-  constructor(name, open_time = 0, close_time = 0, cost_scale = 1, radius = 0, local = false) {
+  constructor(name, open_time, close_time, cost_scale, radius, local) {
     this.name = name;
-    this.open_time = open_time
-    this.close_time = close_time
-    this.cost_scale = cost_scale
-    this.radius = radius
-    this.local = local
-    this.activity_level = 0
+    this.open_time = open_time;
+    this.close_time = close_time;
+    this.cost_scale = cost_scale;
+    this.radius = radius;
+    this.local = local;
+    this.activity_level = 0;
   }
 }
 
 //Preference variables
 
 var city_traveled;
-var begin_date;
-var end_date;
-var activity_level;
-var budget_range;
-var hotel_location;
-var breakfast_provided;
-var preferred_radius;
-var transport_type;
-var food_preferences = [];
-var vegetarian_preference;
-var vegan_preference;
-var travel_party;
-var wake_up_time;
-var bed_time;
+var begin_date_reference;
+var end_date_reference;
+var activity_level_reference;
+var budget_range_reference;
+var hotel_location_reference;
+var breakfast_provided_reference;
+var preferred_radius_reference;
+var transport_type_reference;
+var food_preferences_reference = [];
+var vegetarian_preference_reference;
+var vegan_preference_reference;
+var travel_party_reference;
+var wake_up_time_reference;
+var bed_time_reference;
+var itinerary_list = [];
 
 
-function assignPreferences(){
-  var location = document.getElementById("location")
-  var budget = document.getElementById("budget")
-  var begin_date = document.getElementById("begin_date")
-  var end_date = document.getElementById("end_date")
-  var hotel = document.getElementById("hotel")
-  var radius = document.getElementById("radius")
-  var food1 = document.getElementById("food1") 
-  var food2 = document.getElementById("food2")
-  var num_people = document.getElementById("num_people")
-  var begin_time = document.getElementById("begin_time")
-  var end_time = document.getElementById("end_time")
+const destination = document.getElementById("destination");
+const budget = document.getElementById("budget");
+const begin_date = document.getElementById("begin_date");
+const end_date = document.getElementById("end_date");
+const hotel = document.getElementById("hotel");
+const radius = document.getElementById("radius");
+const food1 = document.querySelector("input[type=checkbox]");
+const food2 = document.getElementById("food2");
+const num_people = document.getElementById("num_people");
+const begin_time = document.getElementById("begin_time");
+const end_time = document.getElementById("end_time");
 
-}
 
-function createDatabase(){
+var budget_current = 1;
+
+budget.addEventListener("change", () => {
+  if (budget.value == " $ (low) "){
+    budget_current  = 1;
+  }
+  else if (budget.value == " $$ (medium) "){
+    budget_current = 2;
+  }
+  else{
+    budget_current = 3;
+  }
+});
+
+radius_current = 1;
+radius.addEventListener("change", () =>{
+  radius_current = parseFloat(radius.value);
+})
+
+food1.addEventListener("change", () =>{
+  if (food1.checked){
+    food_preferences_reference.push(food1.value);   
+  }
+  else{
+    food_preferences_reference.pop(food1.value);
+  }
+})
+
+food2.addEventListener("change", () =>{
+  if (food2.checked){
+    food_preferences_reference.push(food2.value);   
+  }
+  else{
+    food_preferences_reference.pop(food2.value);
+  }
+})
+
+function createDatabase(itinerary_list){
   // name, open_time, close_time, cost_scale, radius, local
   // let Udon_Sushi_Restaurant = new Attraction("Udon_Sushi_Restaurant", 12, 20, 3, 3, true)
   // let Omi_Sushi = new Attraction("Omi_Sushi", 11, 20, 2, 1, true)
@@ -69,35 +104,31 @@ function createDatabase(){
   //Outdoor Activities
   let Horticulture_Gardens = new Attraction("Horticulture Gardens", 6, 22, 1, 1, true)
 
-
   var data_dict = {
   "Food": {"American": [Olympic_Broil, Buffalo_Wild_Wings, iHop, Red_Haven], "Italian": [Sidebar, Jets_Pizza, Andiamo_Fenton]}, 
   "Activities": {"Indoor": [Spare_Time], "Outdoor": [Horticulture_Gardens]}
-  }
-
-
-  var itinerary_list = [];
-
+  };
+  
   for (const [key, value] of Object.entries(data_dict)) {
-    var add_count;
+    var add_count = 0;
     var activity_list = data_dict[key];
     for (const [inner_key, inner_value] of Object.entries(value)){
-      for (var i = 0; i < length(inner_value); i++){
-        if (inner_value[i].activity_level <= activity_level){
+      for (var i = 0; i < inner_value.length; i++){
+        // if (inner_value[i].activity_level <= activity_level_reference){
+        //   add_count += 1;
+        // }
+        if (inner_value[i].radius <= preferred_radius_reference){
           add_count += 1;
         }
-        if (inner_value[i].radius <= preferred_radius){
+        if (inner_value[i].cost_scale <= budget_range_reference){
           add_count += 1;
         }
-        if (inner_value[i].cost_scale <= budget_range){
-          add_count += 1;
-        }
-        if (inner_key in food_preferences){
+        if (inner_key in food_preferences_reference){
           add_count += 1;
         }
 
-        if (add_count >= 2){
-          itinerary_list.push(inner_value)
+        if (add_count >= 1){
+          itinerary_list.push(inner_value[i])
         }
         add_count = 0;
       }
@@ -107,14 +138,27 @@ function createDatabase(){
   return itinerary_list;
 }
 
-function createItinerary(){
+function createItinerary(itinerary_list){
+  for (var i = 0; i < itinerary_list.length; i++){
+    const curr_activity = itinerary_list[i];
+    const activity_name = curr_activity.name;
+    const open_time = curr_activity.open_time;
+    const close_time = curr_activity.close_time;
+    const cost_scale = curr_activity.cost_scale;
+    const radius = curr_activity.radius;
+    const local = curr_activity.local;
+    const activity_level = curr_activity.activity_level;
 
+    
+  }
 }
 
 function submitFunction(){
   assignPreferences();
 
-  createDatabase();
+  const final_itinerary_list = createDatabase(itinerary_list);
 
-  
+  const tempVar = createItinerary(final_itinerary_list);
+  console.log(tempVar);
+
 }
