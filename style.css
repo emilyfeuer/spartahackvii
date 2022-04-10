@@ -29,3 +29,57 @@ ul {
     background-color: #81c8f5;
 
   }
+
+  body{
+    background-color: #F8D210;
+    text-align: center;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FA26A0;
+    background-size: contain;
+    -webkit-text-stroke: 1px white;
+    color: black;
+    max-width: 60%;
+    border-radius: 25px;
+    margin-left: 20%;
+    font-size: 75px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+button{
+    border-radius: 12px;
+    color: black;
+    background-color: #F51720;
+    border:rosybrown;
+    font-size: 20px;
+}
+
+input{
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    /*#FA26A0*/
+}
+
+label{
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+select{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+}
+
+img{
+    width: 250px;
+}
+
