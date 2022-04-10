@@ -7,21 +7,37 @@
     <title></title> <!--title of the tap -->
     <link rel="stylesheet" href="./style.css">  <!-- include the style.css file for the presentation-->
 </head>
-<!-- testing comment 1 -->
 <body>
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="#purpose">Our Purpose</a></li>
         <li><a href="#team">Our Team</a></li>
     </ul>
-
-    <h1>Entertainweeeee</h1>    <!--header of the page-->
-    <p>Welcome to Entertainwe! What is your name?</p>   <!--p stands for paragraph-->
+    <br>
+    <br>
+    <h1>Mytinerary</h1>    <!--header of the page-->
+    <img src="0travel_icon.png" alt="Travel Icon">
+    <img src="travel_icon0.png" alt="Travel Icon">
+    <img src="travel_icon.png" alt="Travel Icon">
+    <p>Welcome to Mytinerary! What is your name?</p>   <!--p stands for paragraph-->
     <form action = "index.html" method="GET">   <!--variables stored and will be use in app.js???-->
         <input type="text" name="name" placeholder="Name">
         <button type="submit">Submit</button>
     </form>
+
+    <br>
+
+    <br>
+
+    <div class="CanvaDesign">
+        <img src="design.png" alt="Canva Design">
+        <img src="design.png" alt="Canva Design">
+        <img src="design.png" alt="Canva Design">
+        <img src="design.png" alt="Canva Design">
+    </div>
+
+    
     
     <form action = "index.html" method="GET" id="preferences">  <!--variables stored and will be use in app.js???-->    
     <h1>Itinerary Preferences:</h1>
@@ -40,44 +56,44 @@
     </select>
     <br>
 
-    <label for="begin_date">On what date are you arriving to your destination?</label>
-    <input type="date" id="begin_date" name="begin_date" placeholder="Arrival Date">
+        <label for="begin_date">On what date are you arriving to your destination?</label>
+        <input type="date" id="begin_date" name="begin_date" placeholder="Arrival Date">
     <br>
 
-    <label for="end_date">On what date are you leaving?</label>
-    <input type="date" id="end_date" name="end_date" placeholder="Departure Date">
+        <label for="end_date">On what date are you leaving?</label>
+        <input type="date" id="end_date" name="end_date" placeholder="Departure Date">
     <br>
 
-    <label for="hotel">Where are you staying?</label>
-    <input type="text" id="hotel" name="hotel" placeholder="Hotel Name">
+        <label for="hotel">Where are you staying?</label>
+        <input type="text" id="hotel" name="hotel" placeholder="Hotel Name">
     <br>
 
-    <label for="radius">What is the maximum distance you would like to travel? (0 to 20 miles)</label>
+        <label for="radius">What is the maximum distance you would like to travel? (0 to 20 miles)</label>
     <br>
-    <input type="range" min="0" max="20" step="5" value="10" class="slider" id="radius" oninput="this.nextElementSibling.value = this.value">
-    <output>10</output> miles
-    <br>
-
-    <label for="food">What type of food do you like?</label>
-    <br>
-    <input type="checkbox" id="food1" name="food1" value="American">
-    <label for="food1"> American </label><br>
-    <input type="checkbox" id="food2" name="food2" value="Italian">
-    <label for="food2"> Italian</label>
+        <input type="range" min="0" max="20" step="5" value="10" class="slider" id="radius" oninput="this.nextElementSibling.value = this.value">
+        <output>10</output> 
     <br>
 
-    <label for="num_people">How many people are you traveling with?</label>
-    <input type="number" id="num_people" name="num+people" value="0" size="3" min="0">
+        <label for="food">What type of food do you like?</label>
+    <br>
+        <input type="checkbox" id="food1" name="food1" value="American">
+        <label for="food1"> American </label><br>
+        <input type="checkbox" id="food2" name="food2" value="Italian">
+        <label for="food2"> Italian</label>
     <br>
 
-    <label for="begin_time">What time would you like to begin activities?</label>
-    <input type="time" id="begin_time" name="begin_time" value="12:00">
+        <label for="num_people">How many people are you traveling with?</label>
+        <input type="number" id="num_people" name="num+people" value="0" size="3" min="0">
     <br>
 
-    <label for="end_time">What time would you like to end activities for the day?</label>
-    <input type="time" id="end_time" name="end_time" value="12:00">
+        <label for="begin_time">What time would you like to begin activities?</label>
+        <input type="time" id="begin_time" name="begin_time" value="12:00">
     <br>
 
+        <label for="end_time">What time would you like to end activities for the day?</label>
+        <input type="time" id="end_time" name="end_time" value="12:00">
+    <br>
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
