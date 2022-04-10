@@ -13,7 +13,7 @@ class Attraction {
 
 //Preference variables
 
-var city_travelled;
+var city_traveled;
 var begin_date;
 var end_date;
 var activity_level;
@@ -31,6 +31,17 @@ var bed_time;
 
 
 function assignPreferences(){
+  var location = document.getElementById("location")
+  var budget = document.getElementById("budget")
+  var begin_date = document.getElementById("begin_date")
+  var end_date = document.getElementById("end_date")
+  var hotel = document.getElementById("hotel")
+  var radius = document.getElementById("radius")
+  var food1 = document.getElementById("food1") // not sure about food1/food2: since they're options to be checked, these variables could equal nothing???
+  var food2 = document.getElementById("food2")
+  var num_people = document.getElementById("num_people")
+  var begin_time = document.getElementById("begin_time")
+  var end_time = document.getElementById("end_time")
 
 }
 
@@ -60,13 +71,13 @@ let Horticulture_Gardens = new Attraction("Horticulture Gardens", 6, 22, 1, 1, t
 
 var data_dict = {
 "Food": {"American": [Olympic_Broil, Buffalo_Wild_Wings, iHop, Red_Haven], "Italian": [Sidebar, Jets_Pizza, Andiamo_Fenton]}, 
-"Indoor": {Spare_Time}, "Outdoor": {Horticulture_Gardens}
+"Activities": {"Indoor": [Spare_Time], "Outdoor": [Horticulture_Gardens]}
 }
 
 
 var itinerary_list = [];
 
-for (let key = 0; key < length(data_dict); key++){
+for (const [key, value] of Object.entries(data_dict)) {
   var add_count;
   var activity_list = data_dict[key];
   for (let i = 0; i < length(value); i++){
@@ -84,6 +95,29 @@ for (let key = 0; key < length(data_dict); key++){
     }
   }
 }
+
+// for (const itinerary_type of Object.keys(data_dict)){
+//   if (data_dict[itinerary_type] == "Food"){
+//     if ((food1 == null) && (food2 == null)){
+//       continue
+//     }
+//     else if (food1 == "American"){
+        
+//     }
+//     else if (food2 == "italian"){
+  
+//     }
+//     else if ((food1 = "American") && (food2 == "italian")){
+    
+//     }
+//   }
+  
+  
+// }
+
+
+
+
 
 
 
