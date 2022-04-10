@@ -80,8 +80,10 @@ for (let key = 0; key < length(data_dict); key++){
       add_count += 1;
     }
     if (activity_list.key in food_preferences){
-      
+      add_count += 1;
     }
   }
 }
+
+
 
