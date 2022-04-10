@@ -244,3 +244,22 @@ img{
   margin-left: 42%;
   filter: invert();
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.placard-styling {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-size: contain;
+    background-color: #85bccd;
+    max-width: 40%;
+    border-radius: 25px;
+    margin-left: 29%;
+    margin: 60px 0 60px 29%;
+}
