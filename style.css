@@ -226,3 +226,21 @@ img{
   margin: 5%;
   filter: invert(30%);
 }
+
+.about_doc{
+  align-items: center;
+  background-image: url("output-onlinepngtools.png");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_pic1{
+  margin-left: 42%;
+  filter: invert();
+}
+
+.about_pic2{
+  margin-left: 42%;
+  filter: invert();
+}
