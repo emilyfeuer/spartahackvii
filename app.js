@@ -94,6 +94,7 @@ for (const [key, value] of Object.entries(data_dict)) {
       add_count += 1;
     }
   }
+  
 }
 
 // for (const itinerary_type of Object.keys(data_dict)){
