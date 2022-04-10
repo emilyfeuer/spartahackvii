@@ -80,45 +80,28 @@ var itinerary_list = [];
 for (const [key, value] of Object.entries(data_dict)) {
   var add_count;
   var activity_list = data_dict[key];
-  for (let i = 0; i < length(value); i++){
-    if ((activity_list)[i].activity_level <= activity_level){
-      add_count += 1;
-    }
-    if ((activity_list)[i].radius <= preferred_radius){
-      add_count += 1;
-    }
-    if ((activity_list)[i].cost_scale <= budget_range){
-      add_count += 1;
-    }
-    if (activity_list.key in food_preferences){
-      add_count += 1;
+  for (const [inner_key, inner_value] of Object.entries(value)){
+    for (var i = 0; i < length(inner_value); i++){
+      if (inner_value[i].activity_level <= activity_level){
+        add_count += 1;
+      }
+      if (inner_value[i].radius <= preferred_radius){
+        add_count += 1;
+      }
+      if (inner_value[i].cost_scale <= budget_range){
+        add_count += 1;
+      }
+      if (inner_key in food_preferences){
+        add_count += 1;
+      }
+
+      if (add_count <= 2){
+        itinerary_list.push(inner_value)
+      }
+      add_count = 0;
     }
   }
-  
+
 }
-
-// for (const itinerary_type of Object.keys(data_dict)){
-//   if (data_dict[itinerary_type] == "Food"){
-//     if ((food1 == null) && (food2 == null)){
-//       continue
-//     }
-//     else if (food1 == "American"){
-        
-//     }
-//     else if (food2 == "italian"){
-  
-//     }
-//     else if ((food1 = "American") && (food2 == "italian")){
-    
-//     }
-//   }
-  
-  
-// }
-
-
-
-
-
 
 
