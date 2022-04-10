@@ -32,7 +32,12 @@ ul {
   }
 
   body{
+    /*background-image: url("paper.png");*/
     background-color: #fcea00;
+    /* background-position: center; Center the image
+    background-repeat: no-repeat; 
+    Do not repeat the image */
+    background-size: cover;/* Resize the background image to cover*/
     text-align: center;
 }
 h1{
@@ -69,6 +74,16 @@ input{
     /*#FA26A0*/
 }
 
+output{
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  color: #ec52ff;
+  border:rosybrown;
+  /*#FA26A0*/
+}
+
 label{
     border-radius: 8px;
     text-align: center;
@@ -79,10 +94,21 @@ label{
 
 select{
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 8px;
+    
     text-align: center;
-    color: $ec52ff;
+    color: #ec52ff;
+    background-color: white;
+    border:rosybrown;
     font-size: 20px;
+}
+
+option{
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 12px;
+  color: #ec52ff;
+  background-color: white;
+  border:rosybrown;
+  font-size: 20px;
 }
 
 img{
