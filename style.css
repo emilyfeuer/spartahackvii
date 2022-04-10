@@ -3,8 +3,8 @@ ul {
     margin: 3;
     padding: 0;
     overflow: hidden;
-    background-color: #add8e6;
-    border-radius: 25px;
+    background-color: #85bccd;
+    /*border-radius: 25px;*/
   }
 
   li {
@@ -14,7 +14,7 @@ ul {
   li a {
     display: block;
     font-weight: bold; 
-    font-size: 22px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
@@ -23,23 +23,31 @@ ul {
   }
 
   li a:hover:not(.active) {
-    background-color: #add8e6;
+    background-color: #85bccd;
+    /* BLUE: #add8e6;*/
   }
 
   .active {
-    background-color: #add8e6;
-
+    background-color: #85bccd;
   }
 
   body{
-    /*background-image: url("paper.png");*/
-    background-color: #fcea00;
-    /* background-position: center; Center the image
+    background-color: white;
+    background-position: center; Center the image
     background-repeat: no-repeat; 
-    Do not repeat the image */
-    background-size: cover;/* Resize the background image to cover*/
+    
+    /* background-size: cover;Resize the background image to cover*/
     text-align: center;
 }
+
+.background1{
+  background-color: #add8e6;
+}
+
+.background2{
+  background-image: url("bbb.png");
+}
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ec52ff;
@@ -94,7 +102,6 @@ label{
 
 select{
     font-family: Arial, Helvetica, sans-serif;
-    
     text-align: center;
     color: #ec52ff;
     background-color: white;
@@ -120,9 +127,6 @@ img{
 .CanvaDesign{
   margin:0px;
   filter: invert();
+  background-color: #0315FF; 
+  /* YELLOW: #fcea00;*/
 }
-
-
-
-
-
