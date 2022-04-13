@@ -4,16 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just a title....</title> <!--title of the tap -->
+    <title></title> <!--title of the tap -->
     <link rel="stylesheet" href="./style.css">  <!-- include the style.css file for the presentation-->
 </head>
 <body>
-    <h1>Entertainweeeee</h1>    <!--header of the page-->
-    <p>Welcome to Entertainwe! What is your name?</p>   <!--p stands for paragraph-->
-    <form action = "index.html" method="GET">   <!--variables stored and will be use in app.js???-->
-        <input type="text" name="name" placeholder="Name">
-        <button type="submit">submit</button>
-    </form>
+    <div class="background1">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="purpose.html">Our Purpose</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="itinerary.html"  style="visibility:hidden">Itinerary</a></li>
+        </ul>
+        <br>
+        <br>
+        <h1>MyTinerary</h1>    <!--header of the page-->
+        <img src="0travel_icon.png" alt="Travel Icon">
+        <img src="travel_icon0.png" alt="Travel Icon">
+        <img src="travel_icon.png" alt="Travel Icon">
+        <p>Welcome to MyTinerary! What is your name?</p>   <!--p stands for paragraph-->
+        <form action = "index.html" method="GET">   <!--variables stored and will be use in app.js???-->
+            <input type="text" name="name" placeholder="Name">
+            <button type="submit">Submit</button>
+        </form>
+
+        <br>
+        <br>
+    </div>
+    <div class = "Canva2">
+        <div class="CanvaDesign">
+            <img src="design.png" alt="Canva Design">
+            <img src="design.png" alt="Canva Design">
+            <img src="design.png" alt="Canva Design">
+            <img src="design.png" alt="Canva Design">
+            <img src="design.png" alt="Canva Design">
+        </div>
+    </div>
     
+
+    
+    <div class="background2">
+        <br>
+        <br>
+
+        <form action = "index.html" method="GET" id="preferences">  <!--variables stored and will be use in app.js???-->    
+        <h2>Itinerary Preferences:</h2>
+        <br>
+        
+        <div class="textbox">
+            <br>
+            <label for="destination">Where are you traveling to?</label>
+            <select id="destination">  
+                <option> East Lansing </option>   
+            </select>
+            <br>
+
+            <label for="budget">What's your budget level?  </label>
+            <select id = "budget">  
+                <option> $ (low) </option> 
+                <option> $$ (medium) </option>
+                <option> $$$ (high) </option>        
+            </select>
+            <br>
+
+                <label for="begin_date">On what date are you arriving to your destination?</label>
+                <input type="date" id="begin_date" name="begin_date" placeholder="Arrival Date">
+            <br>
+
+                <label for="end_date">On what date are you leaving?</label>
+                <input type="date" id="end_date" name="end_date" placeholder="Departure Date">
+            <br>
+
+                <label for="hotel">Where are you staying?</label>
+                <!-- how to make this input pink -->
+                <input type="text" id="hotel" name="hotel" placeholder="Hotel Name">
+            <br>
+
+                <label for="radius">What is the maximum distance you would like to travel? (0 to 20 miles)</label>
+            <br>
+                <input type="range" min="0" max="20" step="5" value="10" class="slider" id="radius" oninput="this.nextElementSibling.value = this.value">
+                <output>10</output> 
+            <br>
+
+                <label for="food">What type of food do you like?</label>
+            <br>
+                <input type="checkbox" id="food1" name="food1" value="American">
+                <label for="food1"> American </label><br>
+                <input type="checkbox" id="food2" name="food2" value="Italian">
+                <label for="food2"> Italian</label>
+            <br>
+
+                <label for="num_people">How many people are you traveling with?</label>
+                <input type="number" id="num_people" name="num+people" value="0" size="3" min="0">
+            <br>
+
+                <label for="begin_time">What time would you like to begin activities?</label>
+                <input type="time" id="begin_time" name="begin_time" value="12:00">
+            <br>
+
+                <label for="end_time">What time would you like to end activities for the day?</label>
+                <input type="time" id="end_time" name="end_time" value="12:00">
+            <br>
+            <br>
+                <div class="submit_itin">
+                    <input id="submit-button" class="clickable" type="submit" value="Submit">
+                </div>
+            <br>
+    
+            </form>
+            
+        </div>
+        <br>
+        <br>
+        <div id="itinerary-list" class="textbox">
+            <p>Activities You'd Like</p>
+        </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

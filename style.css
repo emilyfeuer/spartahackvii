@@ -1,0 +1,265 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #85bccd;
+    /*border-radius: 25px;*/
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    font-weight: bold; 
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #85bccd;
+    /* BLUE: #add8e6;*/
+  }
+
+  .active {
+    background-color: #85bccd;
+  }
+  html{
+    margin: 0;
+  }
+
+  body{
+    background-color: white;
+    margin: 0;
+    background-position: center;
+}
+
+.background1{
+  background-color: #add8e6;
+  margin: 0;
+  text-align: center;
+}
+
+.background2{
+  margin: 0;
+  background-image: url("output-onlinepngtools.png");
+  line-height: 1.8;
+  /*url("bbb.png");*/
+}
+
+.textbox{
+  text-align: center !important;
+  align-self: stretch;
+  background-color: #add8e6;
+  margin-left: 20%;
+  max-width: 60%;
+  border-radius: 25px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ec52ff;
+    background-size: contain;
+    color: white;
+    max-width: 60%;
+    border-radius: 25px;
+    margin: 0;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 75px;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ec52ff;
+  background-size: contain;
+  color: white;
+  max-width: 60%;
+  border-radius: 25px;
+  margin: 0;
+  margin-left: 20%;
+  text-align: center;
+  font-size: 55px;
+}
+
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #85bccd;
+  background-size: contain;
+  color: white;
+  max-width: 60%;
+  border-radius: 25px;
+  margin: 0;
+  margin-left: 20%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    background-size: contain;
+    background-color: #85bccd;
+    max-width: 40%;
+    border-radius: 25px;
+    margin-left: 29%;
+}
+
+button{
+    border-radius: 12px;
+    color: #ec52ff;
+    background-color: white;
+    border:rosybrown;
+    font-size: 20px;
+}
+
+input{
+    border-radius: 12px;
+    text-align: center;
+    align-items: center !important;
+    font-size: 20px;
+    color: #ec52ff !important;
+    border:rosybrown;
+    background-color: white;
+    opacity: 1 !important;
+    /*#FA26A0*/
+}
+
+.submit_itin{
+  border-radius: 12px;
+  text-align: center;
+  align-items: center !important;
+  font-size: 10px !important;
+  font-weight: bold;
+  color: #ec52ff !important;
+  border:rosybrown;
+  background-color: white;
+ 
+  margin-left: 45%;
+  max-width: 10%;
+}
+
+input[type=checkbox] {
+  align-items: right;
+  color: red !important;
+  bottom: 1px;
+}
+
+output{
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  color: #ec52ff;
+  border:rosybrown;
+  /*#FA26A0*/
+}
+
+label{
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    color: #ec52ff;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 1 !important;
+}
+
+select{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ec52ff;
+    background-color: white;
+    border:rosybrown;
+    font-size: 20px;
+}
+
+option{
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 12px;
+  color: #ec52ff;
+  background-color: white;
+  border:rosybrown;
+  font-size: 20px;
+}
+
+img{
+  width: 250px;
+  filter: invert();
+  /*background-color: #522719;*/
+}
+
+.CanvaDesign{
+  margin:0;
+  background-color: #0315FF !important; 
+  margin-left: 5%;
+  /* YELLOW: #fcea00;*/
+}
+
+.Canva2{
+  background-color: #0315FF !important; 
+  filter: invert();
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ec52ff;
+  opacity: 0.3;
+}
+
+.purpose_doc{
+  align-items: center;
+  background-image: url("output-onlinepngtools.png");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.travel_pics{
+  margin: 5%;
+  filter: invert(30%);
+}
+
+.about_doc{
+  align-items: center;
+  background-image: url("output-onlinepngtools.png");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_pic1{
+  margin-left: 42%;
+  filter: invert();
+}
+
+.about_pic2{
+  margin-left: 42%;
+  filter: invert();
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.placard-styling {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-size: contain;
+    background-color: #85bccd;
+    max-width: 40%;
+    border-radius: 25px;
+    margin-left: 29%;
+    margin: 60px 0 60px 29%;
+}
